@@ -17,8 +17,6 @@ void Renderer::Render()
 		//Render
 
 
-
-		window->SwapBuffers();
 		window->SwapBuffers();
 		glfwPollEvents();
 	}
