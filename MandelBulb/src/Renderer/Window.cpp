@@ -12,21 +12,21 @@ Window::Window()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    window = glfwCreateWindow(1000, 800, "MandelBulb", NULL, NULL);
-    if (window == NULL)
+    m_window = glfwCreateWindow(Width, Height, "MandelBulb", NULL, NULL);
+    if (m_window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
     }
-    glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(m_window);
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
     }
 
-    glViewport(0, 0, 800, 600);
+    glViewport(0, 0, Width, Height);
 
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
 }
 
 Window::~Window()
@@ -36,10 +36,10 @@ Window::~Window()
 
 bool Window::ShouldClose()
 {
-	return glfwWindowShouldClose(window);
+	return glfwWindowShouldClose(m_window);
 }
 
 void Window::SwapBuffers()
 {
-    glfwSwapBuffers(window);
+    glfwSwapBuffers(m_window);
 }

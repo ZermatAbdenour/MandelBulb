@@ -7,12 +7,12 @@ class Window
 {
 public:
 	char* Title;
-	int Width, Height;
+	int Width = 1000, Height=800;
 
 	Window();
 	~Window();
 	bool ShouldClose();
 	void SwapBuffers();
 private:
-	GLFWwindow* window;
+	GLFWwindow* m_window;
 };

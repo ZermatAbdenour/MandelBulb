@@ -165,6 +165,7 @@
   <ItemGroup>
     <ClCompile Include="..\Include\Glad\glad.c" />
     <ClCompile Include="src\MandelBulb.cpp" />
+    <ClCompile Include="src\Renderer\ScreenQuad.cpp" />
     <ClCompile Include="src\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Renderer\Shader.cpp" />
     <ClCompile Include="src\Renderer\Util.cpp" />
@@ -172,9 +173,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer\Renderer.h" />
+    <ClInclude Include="src\Renderer\ScreenQuad.h" />
     <ClInclude Include="src\Renderer\Shader.h" />
     <ClInclude Include="src\Renderer\Util.h" />
     <ClInclude Include="src\Renderer\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Renderer\Shaders\fragmentShader.frag" />
+    <None Include="src\Renderer\Shaders\vertexShader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
