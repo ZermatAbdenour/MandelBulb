@@ -22,6 +22,12 @@ public:
 	/// <param name="value">: Value you want to set the uniform to</param>
 	void SetUnsignedInt(const char* name, unsigned int value);
 	void SetFloat(const char* name, float value);
+	/// <summary>
+	/// Set a "vec2" Uniform in the shader
+	/// </summary>
+	/// <param name="name">: Name of the unform</param>
+	/// <param name="value">: Value you want to set the uniform to</param>
+	void SetVec2(const char* name, glm::vec2 value);
 	void SetMat4(const char* name, glm::mat4 value);
 	void Use();
 };

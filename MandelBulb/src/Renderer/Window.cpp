@@ -1,9 +1,7 @@
 #include "Window.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
+int Window::Width = 1000;
+int Window::Height = 1000;
 
 Window::Window()
 {
@@ -26,7 +24,12 @@ Window::Window()
 
     glViewport(0, 0, Width, Height);
 
-    glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
+    glfwSetFramebufferSizeCallback(m_window, [](GLFWwindow* window, int width, int height)
+        {
+            glViewport(0, 0, width, height);
+            Width = width;
+            Height = height;
+        });
 }
 
 Window::~Window()

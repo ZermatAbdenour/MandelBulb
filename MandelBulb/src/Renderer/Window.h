@@ -7,7 +7,7 @@ class Window
 {
 public:
 	char* Title;
-	int Width = 1000, Height=800;
+	static int Width, Height;
 
 	Window();
 	~Window();

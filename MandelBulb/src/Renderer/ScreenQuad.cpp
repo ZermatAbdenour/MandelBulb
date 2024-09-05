@@ -1,5 +1,7 @@
 #include "ScreenQuad.h"
 #include "Glad/glad.h"
+#include "glm/glm.hpp"
+#include "Window.h"
 
 ScreenQuad::ScreenQuad()
 {
@@ -41,6 +43,8 @@ void ScreenQuad::Draw()
 {
 	//Use the full screen shader
 	m_screenShader->Use();
+	m_screenShader->SetVec2("u_resolution",glm::vec2(Window::Width,Window::Height));
+
 	//Use the Vertex Array Object to draw
 	glBindVertexArray(VAO);
 	//Draw the full screen quad
