@@ -1,4 +1,5 @@
 # MandelBulb
+![MandelBulb 9_6_2024 5_51_35 PM](https://github.com/user-attachments/assets/2765b47d-797e-4816-9e9f-bafd444def6a)
 
 This project is a recreation of the 2009 Mandelbulb using C++ and OpenGL.
 
