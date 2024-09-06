@@ -170,6 +170,7 @@
     <ClCompile Include="src\Renderer\Shader.cpp" />
     <ClCompile Include="src\Renderer\Util.cpp" />
     <ClCompile Include="src\Renderer\Window.cpp" />
+    <ClCompile Include="src\ScreenRecorder.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer\Renderer.h" />
@@ -179,6 +180,7 @@
     <ClInclude Include="src\Renderer\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="src\Renderer\Shaders\fragmentShader.frag" />
     <None Include="src\Renderer\Shaders\vertexShader.vert" />
   </ItemGroup>

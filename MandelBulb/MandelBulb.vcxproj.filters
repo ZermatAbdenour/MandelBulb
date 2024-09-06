@@ -36,6 +36,9 @@
     <ClCompile Include="src\Renderer\ScreenQuad.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ScreenRecorder.hpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Renderer\Util.h">
@@ -57,5 +60,6 @@
   <ItemGroup>
     <None Include="src\Renderer\Shaders\vertexShader.vert" />
     <None Include="src\Renderer\Shaders\fragmentShader.frag" />
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
